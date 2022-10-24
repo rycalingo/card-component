@@ -7,12 +7,12 @@ function Card(props) {
       <div className="card-container">
         <div className="card-content">
           <div className="card-top">
-            <img src={props.bannerURL} className="card-banner" alt="card banner" />
+            <img src={process.env.PUBLIC_URL+props.bannerURL} className="card-banner" alt="card banner" />
           </div>
 
           <div className="card-bottom">
             <div className="card-portrait">
-              <img src={props.portrait} alt="user portrait" />
+              <img src={process.env.PUBLIC_URL+props.portrait} alt="user portrait" />
             </div>
             <div className="btn-wrapper"><button data-card-id={props.id} className={"follow-btn" + ((props.follow) ? " highlight" : "")} onClick={props.clickHandler}>{(props.follow) ? "Following" : "Follow"}</button></div>
             <h1 className="card-title">{props.title}</h1>

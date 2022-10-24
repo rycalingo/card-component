@@ -14,9 +14,8 @@ function Deck() {
     let recItem = zodiacSign[n];
     recItem.follow = (zodiacSign[n].follow) ? false : true;
 
-    setZodiacSign(prevItems=>{
+    setZodiacSign(prevItems => {
       prevItems[n] = recItem;
-
       return [...prevItems];
     });
 
@@ -26,12 +25,14 @@ function Deck() {
     return (arr.length-1 !== i) ? <span key={i} className="hash-tag"><a href={"#"+v}>{"#"+v}</a>{", "}</span> : <span key={i} className="hash-tag">{"and " }<a href={"#"+v}>{"#"+v}</a></span>;
   }
 
+  console.log("go");
   return (
     <section className="card-deck">
 
       {zodiacSign.map((d,i)=> {
         return (
-            <Card
+          (zodiacSign) ?
+            (<Card
               key={i}
               id={i}
               follow={d.follow}
@@ -45,7 +46,9 @@ function Deck() {
               tags={d.tags.map(tagLinks)}
               message={d.message}
               clickHandler={clickHandler}
-            />
+            />)
+            :
+            null
         )
 
         }
