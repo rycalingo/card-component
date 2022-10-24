@@ -1,1 +1,3 @@
-# card-component
+#
+
+Using react I created a card component can dynamically that can generate any number of cards base on the list of the record that's been given. When the follow button is clicked, the button color and the text changes to say "Following". The card component is a child of the deck component and within the deck component there is a clickHandler function that will toggle the  boolean property value for "follow" when the follow button is clicked.
