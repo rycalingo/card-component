@@ -9,10 +9,11 @@ function Deck() {
 
   function clickHandler(evt) {
     evt.preventDefault();
+    let name = evt.target.getAttribute("name");
     let n = evt.target.getAttribute("data-card-id");
 
     let recItem = zodiacSign[n];
-    recItem.follow = (zodiacSign[n].follow) ? false : true;
+    recItem.follow = (zodiacSign[n][name]) ? false : true;
 
     setZodiacSign(prevItems => {
       prevItems[n] = recItem;

@@ -14,7 +14,7 @@ function Card(props) {
             <div className="card-portrait">
               <img src={process.env.PUBLIC_URL+props.portrait} alt="user portrait" />
             </div>
-            <div className="btn-wrapper"><button data-card-id={props.id} className={"follow-btn" + ((props.follow) ? " highlight" : "")} onClick={props.clickHandler}>{(props.follow) ? "Following" : "Follow"}</button></div>
+            <div className="btn-wrapper"><button data-card-id={props.id} className={"follow-btn" + ((props.follow) ? " highlight" : "")} onClick={props.clickHandler} name="follow">{(props.follow) ? "Following" : "Follow"}</button></div>
             <h1 className="card-title">{props.title}</h1>
             <p className="card-caption">{props.caption} — {props.tags}</p>
             <p  className="card-details"><span>{props.zodiacDate}</span></p>
