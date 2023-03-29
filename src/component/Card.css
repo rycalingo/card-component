@@ -17,6 +17,7 @@ body {
   display: flex;
   flex-flow: row wrap;
   justify-content: left;
+  align-items: flex-start;
   align-content: space-around;
   gap: 30px;
 

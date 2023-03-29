@@ -5,7 +5,7 @@ import "./Card.css";
 import signs from "../signs";
 
 function Deck() {
-  const [zodiacSign, setZodiacSign] = useState([...signs]);
+  const [zodiacSign, setZodiacSign] = useState(signs);
 
   function clickHandler(evt) {
     evt.preventDefault();
