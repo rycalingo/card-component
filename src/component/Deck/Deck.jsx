@@ -1,8 +1,7 @@
 import React, {useState} from "react";
-import Card from "./Card";
-import "./Card.css";
+import Card from "../Card/Card";
 
-import signs from "../signs";
+import signs from "../../signs";
 
 function Deck() {
   const [zodiacSign, setZodiacSign] = useState(signs);
